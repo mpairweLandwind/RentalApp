@@ -1,0 +1,84 @@
+.property-container{
+    gap: 2rem;
+    position: relative;
+}
+
+.property-container .like{
+    position: absolute;
+    top: 3rem;right: 3rem;
+    cursor: pointer;
+}
+
+.property-container .mantine-Slider-root {
+    align-self: center;
+    max-height: 35rem;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.property-details{
+    width: 100%;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.property-details>div{
+    flex: 1;
+    gap: 1.5rem;
+}
+.image-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+  .image-controls .mantine-Button-root:first-of-type {
+    margin-right: auto;
+  }
+  
+  .image-controls .mantine-Button-root:last-of-type {
+    margin-left: auto;
+  }
+
+.property-details .left .head{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.facilities{
+    gap: 1rem;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.facility{
+    gap: 0.5rem;
+}
+
+.property-details .button{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.property-details .button:hover{
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 700px) {
+    .property-container>div{
+        flex-direction: column;
+    }
+    .head{
+        flex-direction: column;
+    }
+    .facilities{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .property-details>div{
+        width: 100%;
+    }
+}
