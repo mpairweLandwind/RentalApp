@@ -325,7 +325,7 @@ export const checkEmail = async (req, res) => {
 // userController.js
 export const getNotificationNumber = async (req, res) => {
   try {
-    const tokenUserId = req.userRef // User ID from request
+    const tokenUserId = req.user.id // User ID from JWT token
     console.log('user id:', tokenUserId)
     
     if (!tokenUserId || typeof tokenUserId !== 'string') {

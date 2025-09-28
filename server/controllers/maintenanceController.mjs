@@ -21,11 +21,23 @@ export const createMaintenance = async (req, res) => {
       condition, 
       maintenanceSchedule, 
       maintenanceHistory, 
-      userEmail, 
       images 
     } = req.body.data;
 
-    // Creating the listing
+    // Get user ID from the verified JWT token
+    const userId = req.user.id;
+
+    // First, get the user's email to store in the maintenance record
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { email: true }
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Creating the maintenance record
     const maintenance = await prisma.maintenance.create({
       data: {
         name,
@@ -45,9 +57,10 @@ export const createMaintenance = async (req, res) => {
         condition,
         maintenanceSchedule,
         maintenanceHistory,
+        userEmail: user.email, // Store the email directly
         user: {
           connect: {
-            email: userEmail,
+            id: userId, // Connect using the user ID from the token
           },
         },
         image: images || [], // Ensure images is an array, or default to an empty array if null
@@ -127,6 +140,12 @@ export const updateMaintenance = async (req, res) => {
     // Find the maintenance record by its ID
     const maintenance = await prisma.maintenance.findUnique({
       where: { id: req.params.id },
+      select: { 
+        id: true, 
+        user: { 
+          select: { id: true } 
+        } 
+      }
     });
 
     // Check if the maintenance record exists
@@ -134,9 +153,9 @@ export const updateMaintenance = async (req, res) => {
       return res.status(404).json({ message: 'Record not found!' });
     }
 
-    // Verify that the user is authorized to update the record
-    if (req.user.id !== maintenance.userRef) {
-      return res.status(401).json({ message: 'You can only update your own record!' });
+    // Verify that the current user owns this maintenance record
+    if (maintenance.user.id !== req.user.id) {
+      return res.status(403).json({ message: 'You can only update your own record!' });
     }
 
     // Destructure req.body to exclude nested objects and immutable fields
@@ -194,11 +213,32 @@ export const updateMaintenance = async (req, res) => {
 
 export const deleteMaintenance = async (req, res) => {
   try {
+    // First, check if the maintenance record exists and belongs to the current user
+    const existingMaintenance = await prisma.maintenance.findUnique({
+      where: { id: req.params.id },
+      select: { 
+        id: true, 
+        user: { 
+          select: { id: true } 
+        } 
+      }
+    });
+
+    if (!existingMaintenance) {
+      return res.status(404).json({ error: 'Maintenance record not found' });
+    }
+
+    // Verify that the current user owns this maintenance record
+    if (existingMaintenance.user.id !== req.user.id) {
+      return res.status(403).json({ error: 'You can only delete your own maintenance records' });
+    }
+
     await prisma.maintenance.delete({
       where: { id: req.params.id },
     });
-    res.status(204).json({ message: 'Maintenance deleted successfully' });
+    res.status(200).json({ message: 'Maintenance deleted successfully' });
   } catch (error) {
+    console.error('Error deleting maintenance:', error);
     res.status(500).json({ message: error.message });
   }
 };

@@ -18,9 +18,21 @@ export const createListing = async (req, res) => {
       city, 
       address, 
       facilities, 
-      userEmail, 
       images 
     } = req.body.data;
+
+    // Get user ID from the verified JWT token
+    const userId = req.user.id;
+
+    // First, get the user's email to store in the listing
+    const user = await prisma.user.findUnique({
+      where: { id: userId },
+      select: { email: true }
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
 
     // Creating the listing
     const listing = await prisma.listing.create({
@@ -36,9 +48,10 @@ export const createListing = async (req, res) => {
         city,
         address,
         facilities,
+        userEmail: user.email, // Store the email directly in the listing
         user: {
           connect: {
-            email: userEmail,
+            id: userId, // Connect using the user ID from the token
           },
         },
         image: images || [], // Ensure images is an array, or default to an empty array if null
@@ -174,6 +187,26 @@ export const updateListing = asyncHandler(async (req, res) => {
   } = req.body.data;
 
   try {
+    // First, check if the listing exists and belongs to the current user
+    const existingListing = await prisma.listing.findUnique({
+      where: { id },
+      select: { 
+        id: true, 
+        user: { 
+          select: { id: true } 
+        } 
+      }
+    });
+
+    if (!existingListing) {
+      return res.status(404).json({ error: 'Listing not found' });
+    }
+
+    // Verify that the current user owns this listing
+    if (existingListing.user.id !== req.user.id) {
+      return res.status(403).json({ error: 'You can only update your own listings' });
+    }
+
     const listing = await prisma.listing.update({
       where: { id },
       data: {
@@ -204,6 +237,26 @@ export const deleteListing = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   try {
+    // First, check if the listing exists and belongs to the current user
+    const existingListing = await prisma.listing.findUnique({
+      where: { id },
+      select: { 
+        id: true, 
+        user: { 
+          select: { id: true } 
+        } 
+      }
+    });
+
+    if (!existingListing) {
+      return res.status(404).json({ error: 'Listing not found' });
+    }
+
+    // Verify that the current user owns this listing
+    if (existingListing.user.id !== req.user.id) {
+      return res.status(403).json({ error: 'You can only delete your own listings' });
+    }
+
     await prisma.listing.delete({
       where: { id },
     });
