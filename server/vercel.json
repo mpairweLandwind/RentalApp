@@ -1,19 +1,38 @@
 {
-    "version": 2,
-    "name": "node-js",
-    "builds": [
-        { "src": "index.js", "use": "@vercel/node" }
-    ],
-    "routes": [
-        { 
-            "src": "/(.*)", 
-            "headers": {
-                "Access-Control-Allow-Origin": "https://rental-app-bice.vercel.app, https://rentalapp-one.vercel.app", 
-                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
-                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-                "Access-Control-Allow-Credentials": "true"
-            },
-            "dest": "/" 
-        }
-    ]
+  "version": 2,
+  "name": "gestimpact-server",
+  "builds": [
+    { 
+      "src": "index.js", 
+      "use": "@vercel/node" 
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "dest": "index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ],
+  "functions": {
+    "index.js": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "installCommand": "yarn install",
+  "buildCommand": "yarn postinstall",
+  "outputDirectory": ".",
+  "framework": null
 }
