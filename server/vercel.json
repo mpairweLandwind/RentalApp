@@ -8,7 +8,7 @@
         { 
             "src": "/(.*)", 
             "headers": {
-                "Access-Control-Allow-Origin": "https://gestimpact.vercel.app", 
+                "Access-Control-Allow-Origin": "https://rental-app-bice.vercel.app, https://rentalapp-one.vercel.app", 
                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
                 "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
                 "Access-Control-Allow-Credentials": "true"
