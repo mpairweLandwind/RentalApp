@@ -65,8 +65,9 @@ NODE_ENV="production"
 ### 🔧 **Build Process**
 - Uses Vite for fast builds and hot module replacement
 - Optimized chunk sizes (1000 kB warning limit)
-- SCSS preprocessing with Dart Sass
+- SCSS preprocessing with Dart Sass (automatically handled by Vite)
 - Tree-shaking for smaller bundle size
+- Terser minification for production builds
 
 ### 🚀 **Performance Features**
 - **Static Asset Caching**: 1 year cache for immutable assets
@@ -107,6 +108,13 @@ After deployment, test these features:
 4. **API Connection Issues**
    - Verify VITE_API_URL is correct
    - Check CORS configuration on server
+
+5. **SCSS/SASS Styles Not Applied**
+   - ✅ Fixed: Ensure `sass` package is in devDependencies
+   - ✅ Fixed: Ensure `terser` is in devDependencies (required for minification)
+   - Vite automatically handles SCSS when `sass` is installed - no manual configuration needed
+   - Check build logs to confirm CSS bundle is generated
+   - Verify the CSS file is being loaded in browser DevTools
 
 ## Performance Monitoring
 
