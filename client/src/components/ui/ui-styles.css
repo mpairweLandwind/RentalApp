@@ -1,0 +1,25 @@
+* 
+  Scope for shadcn/ui components only
+  This prevents Tailwind from affecting your existing components
+*/
+.shadcn-container {
+  /* Re-enable Tailwind for this container only */
+  all: initial;
+  font-family: "Poppins", sans-serif;
+}
+
+.shadcn-container * {
+  box-sizing: border-box;
+}
+
+/* Allow Tailwind utilities within shadcn-container */
+.shadcn-container [class*="flex"],
+.shadcn-container [class*="grid"],
+.shadcn-container [class*="p-"],
+.shadcn-container [class*="m-"],
+.shadcn-container [class*="text-"],
+.shadcn-container [class*="bg-"],
+.shadcn-container [class*="border"],
+.shadcn-container [class*="rounded"] {
+  /* Tailwind classes work here */
+}
