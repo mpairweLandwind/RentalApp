@@ -9,9 +9,16 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         implementation: sass,
+        additionalData: `@import "./src/variables.scss";`, 
       },
     },
   },
+   // Asset handling
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.ico', '**/*.webp'],
+  
+  // Public directory
+  publicDir: 'public',
+
   build: {
     chunkSizeWarningLimit: 1000, // Increase to 1000 kB
     rollupOptions: {
