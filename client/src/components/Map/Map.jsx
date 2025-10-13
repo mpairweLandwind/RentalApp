@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // Map.jsx
 import React from 'react';
 import { MapContainer, TileLayer } from 'react-leaflet';

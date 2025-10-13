@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Textarea, Button, Tooltip } from '@mantine/core';

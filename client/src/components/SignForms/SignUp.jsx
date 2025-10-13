@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect, React } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import OAuth from './OAuth';
 import user_icon from "../../assets/person.png";
@@ -93,7 +93,7 @@ export default function SignUp() {
       } else {
         setError(result.message);
       }
-    } catch (err) {
+    } catch {
       setError(t('signUp.error'));
     } finally {
       setLoading(false);

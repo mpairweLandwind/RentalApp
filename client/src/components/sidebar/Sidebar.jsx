@@ -1,4 +1,6 @@
-import { useContext, useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
+import { useContext, useEffect, useRef, React } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import { LIGHT_THEME, DARK_THEME } from '../../constants/themeConstants';
 import LogoBlue from '../../assets/images/logo_blue.svg';

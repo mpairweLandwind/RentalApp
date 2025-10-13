@@ -1,4 +1,5 @@
-import { useState, useEffect, useContext } from 'react';
+/* eslint-disable no-undef */
+import { React, useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import {
   BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer

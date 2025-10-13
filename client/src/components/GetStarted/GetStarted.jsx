@@ -1,3 +1,4 @@
+import React from "react";
 import "./GetStarted.css";
 import PropTypes from "prop-types";
 
