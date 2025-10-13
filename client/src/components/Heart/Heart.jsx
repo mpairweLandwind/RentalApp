@@ -1,4 +1,5 @@
-import { useContext, useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useContext, useEffect, useState, React } from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { useMutation } from "react-query";
 import UserDetailContext from "../../context/UserDetailContext";

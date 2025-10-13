@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, React } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import usePayPalScript from '../hooks/usePayPalScript';

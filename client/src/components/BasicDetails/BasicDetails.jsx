@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInput, Box, Textarea, Group, Button, NumberInput, Select } from "@mantine/core";
 import { useForm } from "@mantine/form";

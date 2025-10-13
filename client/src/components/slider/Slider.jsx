@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, React } from "react";
 import PropTypes from "prop-types";
 import "./slider.scss";
 

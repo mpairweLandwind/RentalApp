@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, React } from "react";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { Button } from "@mantine/core";
 import "./UploadImage.css";
