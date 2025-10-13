@@ -8,7 +8,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "prisma generate",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "test": "jest"
   },
   "dependencies": {
     "@prisma/client": "6.16.1",
@@ -24,8 +25,13 @@
     "nodemailer": "^6.9.15"
   },
   "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "eslint": "^9.37.0",
+    "globals": "^16.4.0",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.4",
-    "prisma": "6.16.1"
+    "prisma": "6.16.1",
+    "supertest": "^7.1.4"
   },
   "packageManager": "yarn@4.10.3"
 }
