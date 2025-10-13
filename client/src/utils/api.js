@@ -1,9 +1,11 @@
+/* eslint-disable no-useless-catch */
 import axios from "axios";
 import { toast } from "react-toastify";
 
 
 export const api = axios.create({
-  baseURL: "https://rental-app-bice.vercel.app",
+  baseURL: "http://localhost:3000/api",
+  //baseURL: "https://rental-app-bice.vercel.app",
   //"http://localhost:3000/api"
   // "https://gestimpact-server.vercel.app/api",
 });
