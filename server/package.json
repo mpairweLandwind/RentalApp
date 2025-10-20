@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "build": "prisma generate",
     "postinstall": "prisma generate",
-    "test": "jest"
+    "test": "NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
   },
   "dependencies": {
     "@prisma/client": "6.16.1",
