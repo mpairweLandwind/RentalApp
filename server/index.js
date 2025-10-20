@@ -56,16 +56,16 @@ app.use('/api/auth', authRouter);
 app.use('/api/email', emailRoutes);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../Client/dist')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 // The "catchall" handler: for any request that doesn't match one above, send back the React index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Client/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/', 'index.html'));
 });
 
 // Serve the index.html file on the root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Client/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/', 'index.html'));
 });
 
 app.use((err, req, res, next) => {
