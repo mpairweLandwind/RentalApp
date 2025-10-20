@@ -9,7 +9,11 @@ const connectDB = async () => {
     console.log('Prisma connected');
   } catch (error) {
     console.error(`Error: ${error.message}`);
-    process.exit(1);
+    if (process.env.NODE_ENV !== 'test') {
+      throw error;
+    } else {
+      process.exit(1);
+    }
   }
 };
 
