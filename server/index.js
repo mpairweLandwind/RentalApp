@@ -78,8 +78,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start the server (only in development)
-if (process.env.NODE_ENV !== 'production') {
+// Start the server (only in development and test)
+// don't start the listener during tests; export server handle to allow closing from tests
+
+if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log('Prisma connected');
