@@ -1,3 +1,4 @@
+import React from 'react';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import { app } from '../firebase';
 import { useContext } from 'react';

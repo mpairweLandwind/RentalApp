@@ -1,7 +1,7 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Box, Button, Group, NumberInput, Switch } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, React } from "react";
 import PropTypes from 'prop-types';
 import UserDetailContext from "../../context/UserDetailContext";
 import useProperties from "../../hooks/useProperties.jsx";

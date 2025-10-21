@@ -56,16 +56,16 @@ app.use('/api/auth', authRouter);
 app.use('/api/email', emailRoutes);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../Client/dist')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 // The "catchall" handler: for any request that doesn't match one above, send back the React index.html file.
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Client/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/', 'index.html'));
 });
 
 // Serve the index.html file on the root route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Client/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client/', 'index.html'));
 });
 
 app.use((err, req, res, next) => {
@@ -78,8 +78,10 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start the server (only in development)
-if (process.env.NODE_ENV !== 'production') {
+// Start the server (only in development and test)
+// don't start the listener during tests; export server handle to allow closing from tests
+
+if (process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     console.log('Prisma connected');

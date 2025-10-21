@@ -1,3 +1,4 @@
+import React from "react";
 import { MdOutlineMenu } from "react-icons/md";
 import "./AreaTop.scss";
 import { useContext, useEffect, useRef, useState } from "react";

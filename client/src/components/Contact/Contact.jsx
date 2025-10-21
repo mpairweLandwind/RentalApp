@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from "react";
 import "./Contact.css";
 import { MdCall, MdEmail } from "react-icons/md"; // Import email icon
 import { BsFillChatDotsFill } from "react-icons/bs";

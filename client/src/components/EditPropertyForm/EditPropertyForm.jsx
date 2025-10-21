@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useContext } from 'react';
 import { useForm } from '@mantine/form';
 import { useTranslation } from 'react-i18next';

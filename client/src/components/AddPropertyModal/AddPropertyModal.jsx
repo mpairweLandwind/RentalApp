@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Modal, Stepper } from "@mantine/core";
 import { useState } from "react";
 import { useTranslation } from "react-i18next"; // Importing the translation hook

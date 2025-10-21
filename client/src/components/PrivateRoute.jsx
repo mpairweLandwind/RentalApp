@@ -1,4 +1,6 @@
-import { useContext } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import { useContext, React } from "react";
 import { Navigate } from "react-router-dom"
 import UserDetailContext from "../context/UserDetailContext";
 

@@ -1,6 +1,7 @@
 import AreaBarChart from "./AreaBarChart"
 import AreaProgressChart from "./AreaProgressChart"
 import "./AreaCharts.scss";
+import React from "react";
 
 const AreaCharts = () => {
   return (

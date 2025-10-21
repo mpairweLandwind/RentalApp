@@ -1,5 +1,4 @@
-
-
+import React from "react";
 import AreaTop from "../../components/dashboard/areaTop/AreaTop";
 import AreaTableE from "../../components/dashboard/areaTable/AreaTableE";
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { useForm } from "@mantine/form";
 import { Button, Group, Select, TextInput } from "@mantine/core";

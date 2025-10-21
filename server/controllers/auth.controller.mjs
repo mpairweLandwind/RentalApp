@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import asyncHandler from "express-async-handler";
 import prisma from '../lib/prisma.mjs';
 import bcrypt from 'bcryptjs';

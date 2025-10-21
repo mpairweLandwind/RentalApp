@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInput, Box, Textarea, Group, Button, NumberInput, Select, Grid, Col, Title } from "@mantine/core";
 import { DateInput } from "@mantine/dates";
