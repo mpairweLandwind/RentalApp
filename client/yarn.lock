@@ -1439,6 +1439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@parcel/watcher-android-arm64@npm:2.5.1":
   version: 2.5.1
   resolution: "@parcel/watcher-android-arm64@npm:2.5.1"
@@ -1583,6 +1584,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -2309,6 +2312,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
+=======
+"anymatch@npm:~3.1.2":
+  version: 3.1.3
+  resolution: "anymatch@npm:3.1.3"
+  dependencies:
+    normalize-path: "npm:^3.0.0"
+    picomatch: "npm:^2.0.4"
+  checksum: 10c0/57b06ae984bc32a0d22592c87384cd88fe4511b1dd7581497831c56d41939c8a001b28e7b853e1450f2bf61992dfcaa8ae2d0d161a0a90c4fb631ef07098fbac
+  languageName: node
+  linkType: hard
+
+"argparse@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "argparse@npm:2.0.1"
+  checksum: 10c0/c5640c2d89045371c7cedd6a70212a04e360fd34d6edeae32f6952c63949e3525ea77dbec0289d8213a99bbaeab5abfa860b5c12cf88a2e6cf8106e90dd27a7e
+  languageName: node
+  linkType: hard
+
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "aria-hidden@npm:^1.1.3":
   version: 1.2.3
   resolution: "aria-hidden@npm:1.2.3"
@@ -2514,6 +2537,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
+=======
+"binary-extensions@npm:^2.0.0":
+  version: 2.3.0
+  resolution: "binary-extensions@npm:2.3.0"
+  checksum: 10c0/75a59cafc10fb12a11d510e77110c6c7ae3f4ca22463d52487709ca7f18f69d886aa387557cc9864fbdb10153d0bdb4caacabf11541f55e89ed6e18d12ece2b5
+  languageName: node
+  linkType: hard
+
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "brace-expansion@npm:^1.1.7":
   version: 1.1.12
   resolution: "brace-expansion@npm:1.1.12"
@@ -2533,7 +2566,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "braces@npm:^3.0.3":
+=======
+"braces@npm:~3.0.2":
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
   version: 3.0.3
   resolution: "braces@npm:3.0.3"
   dependencies:
@@ -2649,6 +2686,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
+=======
+"chalk@npm:^4.0.0":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
+  dependencies:
+    ansi-styles: "npm:^4.1.0"
+    supports-color: "npm:^7.1.0"
+  checksum: 10c0/4a3fef5cc34975c898ffe77141450f679721df9dde00f6c304353fa9c8b571929123b26a0e4617bde5018977eb655b31970c297b91b63ee83bb82aeb04666880
+  languageName: node
+  linkType: hard
+
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "chokidar@npm:>=3.0.0 <4.0.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
@@ -3019,6 +3069,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "detect-libc@npm:^1.0.3":
   version: 1.0.3
   resolution: "detect-libc@npm:1.0.3"
@@ -3028,6 +3079,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "detect-node-es@npm:^1.1.0":
   version: 1.1.0
   resolution: "detect-node-es@npm:1.1.0"
@@ -4289,10 +4342,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "immutable@npm:^5.0.2":
   version: 5.1.3
   resolution: "immutable@npm:5.1.3"
   checksum: 10c0/f094891dcefb9488a84598376c9218ebff3a130c8b807bda3f6b703c45fe7ef238b8bf9a1eb9961db0523c8d7eb116ab6f47166702e4bbb1927ff5884157cd97
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "ignore@npm:^5.2.0":
   version: 5.3.2
   resolution: "ignore@npm:5.3.2"
@@ -4553,7 +4609,10 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "is-glob@npm:^4.0.3":
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "is-generator-function@npm:^1.0.10":
   version: 1.1.2
   resolution: "is-generator-function@npm:1.1.2"
@@ -5037,6 +5096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "micromatch@npm:^4.0.5":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
@@ -5047,6 +5107,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "microseconds@npm:0.2.0":
   version: 0.2.0
   resolution: "microseconds@npm:0.2.0"
@@ -5203,6 +5265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "node-addon-api@npm:^7.0.0":
   version: 7.1.1
   resolution: "node-addon-api@npm:7.1.1"
@@ -5212,6 +5275,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "node-fetch@npm:^2.6.12":
   version: 2.7.0
   resolution: "node-fetch@npm:2.7.0"
@@ -5264,6 +5329,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
+=======
+"normalize-path@npm:^3.0.0, normalize-path@npm:~3.0.0":
+  version: 3.0.0
+  resolution: "normalize-path@npm:3.0.0"
+  checksum: 10c0/e008c8142bcc335b5e38cf0d63cfd39d6cf2d97480af9abdbe9a439221fd4d749763bab492a8ee708ce7a194bb00c9da6d0a115018672310850489137b3da046
+  languageName: node
+  linkType: hard
+
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
 "object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
@@ -5532,7 +5607,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "picomatch@npm:^2.3.1":
+=======
+"picomatch@npm:^2.0.4, picomatch@npm:^2.2.1, picomatch@npm:^2.3.1":
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 10c0/26c02b8d06f03206fc2ab8d16f19960f2ff9e81a658f831ecb656d8f17d9edc799e8364b1f4a7873e89d9702dff96204be0fa26fe4181f6843f040f819dac4be
@@ -5941,10 +6020,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "readdirp@npm:^4.0.1":
   version: 4.1.2
   resolution: "readdirp@npm:4.1.2"
   checksum: 10c0/60a14f7619dec48c9c850255cd523e2717001b0e179dc7037cfa0895da7b9e9ab07532d324bfb118d73a710887d1e35f79c495fa91582784493e085d18c72c62
+=======
+"readdirp@npm:~3.6.0":
+  version: 3.6.0
+  resolution: "readdirp@npm:3.6.0"
+  dependencies:
+    picomatch: "npm:^2.2.1"
+  checksum: 10c0/6fa848cf63d1b82ab4e985f4cf72bd55b7dcfd8e0a376905804e48c3634b7e749170940ba77b32804d5fe93b3cc521aa95a8d7e7d725f830da6d93f3669ce66b
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
   languageName: node
   linkType: hard
 
@@ -5990,7 +6078,11 @@ __metadata:
     react-spinners: "npm:^0.13.8"
     react-toastify: "npm:^9.1.3"
     recharts: "npm:^2.12.7"
+<<<<<<< HEAD
     sass: "npm:^1.93.2"
+=======
+    sass: "npm:^1.77.8"
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
     swiper: "npm:^11.1.12"
     vite: "npm:^7.1.7"
     world-countries: "npm:^4.0.0"
@@ -6304,6 +6396,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "sass@npm:^1.93.2":
   version: 1.93.2
   resolution: "sass@npm:1.93.2"
@@ -6318,6 +6411,18 @@ __metadata:
   bin:
     sass: sass.js
   checksum: 10c0/5a19f12dbe8c142e40c1e0473d1e624898242b1c21010301e169b528be8c580df6356329c798522b525eb11eda4b04b9b77422badc55c47889600f8477201d2b
+=======
+"sass@npm:^1.77.8":
+  version: 1.77.8
+  resolution: "sass@npm:1.77.8"
+  dependencies:
+    chokidar: "npm:>=3.0.0 <4.0.0"
+    immutable: "npm:^4.0.0"
+    source-map-js: "npm:>=0.6.2 <2.0.0"
+  bin:
+    sass: sass.js
+  checksum: 10c0/2bfd62794070352c804f949e69bd8bb5b4ec846deeb924251b2c3f7b503170fb1ae186f513f0166907749eb34e0277dee747edcb78c886fb471aac01be1e864c
+>>>>>>> 5e9d1f1ed3835dd213c325c8d3bb051835e47a54
   languageName: node
   linkType: hard
 

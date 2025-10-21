@@ -47,11 +47,7 @@
     "@eslint/js": "^9.37.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^5.0.4",
-    "sass": "^1.93.2",
-    "eslint": "^9.37.0",
-    "eslint-plugin-react": "^7.37.5",
-    "globals": "^16.4.0",
+    "@vitejs/plugin-react": "^3.1.0",
     "sass": "^1.77.8",
     "vite": "^7.1.7"
   },
